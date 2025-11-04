@@ -4,13 +4,14 @@ import static org.junit.Assert.assertEquals;
 
 public class Unit {
 	private String name;
-	private double length, width;
+	private double length, width, area;
 	private boolean feet = true;
 	
 	public Unit(String name, int width, int length) {
 		this.name = name;
 		this.width = width;
 		this.length = length;
+		area = width * length;
 	}
 	
 	public String toString() {
@@ -19,8 +20,8 @@ public class Unit {
 		//measured in feet
 		//"A unit of 126 square feet (14' wide and 9' long) functioning as Master Room"
 		if(feet) {
-			int area = (int) (length * width);
-			str = "A unit of " + area +" square feet (" + (int)width + "' wide and " + (int)length + "' long) functioning as " + name;
+			area = (int) (length * width);
+			str = "A unit of " + (int) area +" square feet (" + (int)width + "' wide and " + (int)length + "' long) functioning as " + name;
 		}
 		
 		//measured in ms
@@ -28,7 +29,7 @@ public class Unit {
 		else {
 			double templength =  Math.round(length * 100.0) / 100.0;
 			double tempwidth  = Math.round(width * 100.0) / 100.0;
-			double area = Math.round(length * width * 100.0) / 100.0;
+			area = Math.round(length * width * 100.0) / 100.0;
 			
 			str = "A unit of " + area + " square meters (" + tempwidth + " m wide and " + templength + " m long) functioning as "+ name;
 		}
@@ -51,5 +52,50 @@ public class Unit {
 			length = (int) Math.round(length /.3048);
 			width = (int) Math.round(width /.3048);
 		}
+	}
+	
+	public boolean equals(Object obj) {
+		
+		return (this.getName().equals(((Unit) obj).getName())) && (this.getArea() == ((Unit) obj).getArea());
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getLength() {
+		return length;
+	}
+
+	public void setLength(double length) {
+		this.length = length;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	public void setWidth(double width) {
+		this.width = width;
+	}
+
+	public boolean isFeet() {
+		return feet;
+	}
+
+	public double getArea() {
+		return area;
+	}
+
+	public void setArea(double area) {
+		this.area = area;
+	}
+
+	public void setFeet(boolean feet) {
+		this.feet = feet;
 	}
 }
