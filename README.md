@@ -1,9 +1,11 @@
-# Building Blueprint System (Java)
+# Building Blueprint System
 
 ## Project Overview
 This project implements a simplified building blueprint system in Java. The system models building units (rooms), floors with limited capacity, and an overall building blueprint composed of multiple floor plans. The required behavior, constraints, and design decisions are fully specified through JUnit test cases, which serve as the primary documentation for the system.
 
 The project emphasizes object-oriented design, correct use of equality, and manual management of collections using primitive arrays only.
+
+
 
 ## System Components
 The system is composed of the following core classes:
