@@ -1,9 +1,11 @@
-# Sequence Expression Evaluator (Java)
+# Sequence Expression Evaluator
 
 ## Project Overview
 This project implements a sequence expression evaluation framework in Java. The system models operations over integer sequences, including projections, prefix sums, and containment checks, as well as evaluators that combine or filter the results of these operations.
 
 All required behavior, constraints, and design expectations are defined entirely through JUnit tests, which act as executable specifications for the system.
+
+
 
 ## System Components
 The system is built around the following core abstractions:
