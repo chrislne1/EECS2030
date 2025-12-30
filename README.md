@@ -37,3 +37,13 @@ All functionality is validated using JUnit tests. The tests define:
 - Preservation of composition through defensive copying
 
 
+
+## Learning Objectives
+- Practice object-oriented design under strict constraints
+- Infer class responsibilities and interactions from JUnit tests
+- Implement robust equals methods
+- Manage multi-valued attributes using arrays
+- Apply defensive copying to preserve encapsulation
+- Understand exception-based control flow in Java
+
+
